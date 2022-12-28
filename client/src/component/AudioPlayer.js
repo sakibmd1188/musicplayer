@@ -104,7 +104,7 @@ export default function AudioPLayer({
           percentage={currentPercentage}
           isPlaying={true}
           image={currentTrack?.album?.images[0]?.url}
-          size={300}
+          size={250}
           color="#C96850"
         />
       </div>

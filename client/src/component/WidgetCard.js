@@ -1,46 +1,58 @@
-// import React, { useState, useEffect } from "react";
-// import "./widgets.css";
-// import apiClient from "../../spotify";
-// import WidgetCard from "./WidgetCard";
+import {
+    ArrowForward,
+  ArrowForwardIos,
+  ForkRight,
+  PlayArrow,
+  PlayCircle,
+  SkipNext,
+  SkipNextSharp,
+} from "@mui/icons-material";
+import React from "react";
+import "./widgetCard.css";
+import WidgetEntry from "./WidgetEntry";
 
-// export default function Widgets({ artistID }) {
-//   const [similar, setSimilar] = useState([]);
-//   const [featured, setFeatured] = useState([]);
-//   const [newRelease, setNewRelease] = useState([]);
-
-//   useEffect(() => {
-//     if (artistID) {
-//       apiClient
-//         .get(`/artists/${artistID}/related-artists`)
-//         .then((res) => {
-//           const a = res.data?.artists.slice(0, 3);
-//           setSimilar(a);
-//         })
-//         .catch((err) => console.error(err));
-
-//       apiClient
-//         .get(`/browse/featured-playlists`)
-//         .then((res) => {
-//           const a = res.data?.playlists.items.slice(0, 3);
-//           setFeatured(a);
-//         })
-//         .catch((err) => console.error(err));
-
-//       apiClient
-//         .get(`/browse/new-releases`)
-//         .then((res) => {
-//           const a = res.data?.albums.items.slice(0, 3);
-//           setNewRelease(a);
-//         })
-//         .catch((err) => console.error(err));
-//     }
-//   }, [artistID]);
-
-//   return (
-//     <div className="widgets-body flex">
-//       <WidgetCard title="Similar Artists" similar={similar} />
-//       <WidgetCard title="Made For You" featured={featured} />
-//       <WidgetCard title="New Releases" newRelease={newRelease} />
-//     </div>
-//   );
-// }
+export default function WidgetCard({ title, similar, featured, newRelease }) {
+  console.log(
+    "similar",
+    similar,
+    "featured",
+    featured,
+    "newRelease",
+    newRelease
+  );
+  return (
+    <div className="widgetcard-body">
+      <p className="widget-title">{title}</p>
+      {similar
+        ? similar.map((artist) => (
+            <WidgetEntry
+              title={artist?.name}
+              subtitle={artist?.followers?.total + " Followers"}
+              image={artist?.images[2]?.url}
+            />
+          ))
+        : featured
+        ? featured.map((playlist) => (
+            <WidgetEntry
+              title={playlist?.name}
+              subtitle={playlist?.tracks?.total + " Songs"}
+              image={playlist?.images[0]?.url}
+            />
+          ))
+        : newRelease
+        ? newRelease.map((album) => (
+            <WidgetEntry
+              title={album?.name}
+              subtitle={album?.artists[0]?.name}
+              image={album?.images[2]?.url}
+            />
+          ))
+        : null}
+      <div className="widget-fade">
+        <div className="fade-button">
+          <ArrowForwardIos />
+        </div>
+      </div>
+    </div>
+  );
+}

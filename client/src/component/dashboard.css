@@ -19,7 +19,7 @@
 }
 
 .icons div:hover {
-  transform: scale(1.2);
+  transform: scale(1.4);
   border-radius: 10px;
   background-color: rgb(255, 206, 213);
   color: white;
