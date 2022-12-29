@@ -48,7 +48,7 @@ export default function ProgressCircle({
           </clipPath>
         </defs>
         <image
-          className={isPlaying ? "active" : ""}
+          className={isPlaying ? "active one" : ""}
           x={30}
           y={30}
           width={2 * (size / 2 - 30)}
@@ -57,7 +57,7 @@ export default function ProgressCircle({
           clipPath="url(#myCircle)"
         />
         <image
-          className={isPlaying ? "active" : ""}
+          className={isPlaying ? "active one" : ""}
           x={100}
           y={100}
           width={2 * (size / 2 - 100)}

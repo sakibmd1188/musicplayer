@@ -19,3 +19,12 @@
   z-index: -1;
   top: 10 px;
 }
+@media screen and (max-width: 480px) {
+
+  .albumImage {
+    width: 60%;
+
+  }
+  
+  
+}

@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./Player.css";
 import { useLocation } from "react-router-dom";
 import apiClient from "../spotify";
-import SongCard from "./SongCard";
+
 import Queue from "./Queue";
 import AudioPlayer from "./AudioPlayer";
 import Widgets from "./Widgets";
+import SongCard from "./Song/SongCard";
 export default function Player() {
   const location = useLocation();
   const [tracks, setTracks] = useState([]);
@@ -38,6 +39,7 @@ export default function Player() {
           currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}
         />
+
         <Widgets artistID={currentTrack?.album?.artists[0]?.id} />
       </div>
 

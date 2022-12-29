@@ -73,12 +73,12 @@
   line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-/* font-size: 14px;
-font-weight: 500;
-color: #9aa9c2;
-overflow: hidden;
-text-overflow: ellipsis;
-display: -webkit-box;
--webkit-line-clamp: 2;
-line-clamp: 2;
--webkit-box-orient: vertical; */
+
+
+@media screen and (max-width: 480px) {
+  .queue-container {
+    width: 50%;
+    height: 70%;
+
+  }
+}

@@ -15,3 +15,11 @@
     repeating-linear-gradient(#4767d055,black);
     border: 0.3px solid rgb(77, 76, 76);
 }
+@media screen and (max-width: 480px) 
+{
+  .songCard-body {
+    width: 50%;
+    height: 70%;
+
+  }
+}

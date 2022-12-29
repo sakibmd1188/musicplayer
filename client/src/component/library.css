@@ -95,8 +95,48 @@
   /* width: 20%;
   height: 20%; */
   font-weight: 200px;
-height: 200px;
-font-size: 200px;
+  height: 200px;
+  font-size: 200px;
   color: aqua;
   border: 1px solid red;
+}
+
+@media screen and (max-width: 480px) {
+  .playlist-card {
+    width: 40%;
+    height: 28%;
+  }
+  .playlist-title {
+    font-size: 12px;
+    margin: 3px 0px 3px;
+  }
+  .playlist_subtitle {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 600px) and (min-width: 480px) {
+  .playlist-card {
+    width: 32%;
+    height: 28%;
+  }
+  .playlist-title {
+    font-size: 14px;
+    margin: 4px 0px 4px;
+  }
+  .playlist_subtitle {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+  .playlist-card {
+    width: 28%;
+    height: 30%;
+  }
+  .playlist-title {
+    font-size: 16px;
+    margin: 3px 0px 3px;
+  }
+  .playlist_subtitle {
+    font-size: 14px;
+  }
 }

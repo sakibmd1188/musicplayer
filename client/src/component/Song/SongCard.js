@@ -2,6 +2,7 @@ import React from "react";
 import AlbumImage from "./AlbumImage";
 import AlbumInfo from "./AlbumInfo";
 import "./songCard.css";
+
 const SongCard = ({ album }) => {
   return (
     <div className="songCard-body flex">

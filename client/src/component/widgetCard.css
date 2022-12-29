@@ -18,6 +18,7 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   overflow-y: scroll;
+  /* background-color: red; */
 }
 
 .widgetcard-body:hover {
@@ -30,6 +31,7 @@
   font-size: 18px;
   font-weight: 800;
   color: #c4d0e3;
+
 }
 
 .widget-fade {
@@ -61,4 +63,16 @@
   align-items: center;
   color: white;
   /* font-size: 24px; */
+}
+
+@media screen and (max-width: 480px) {
+  .widgetcard-body {
+
+
+  }
+  .widget-title {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+  }
 }

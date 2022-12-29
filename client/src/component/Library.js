@@ -30,7 +30,6 @@ export default function Library() {
             key={list.id}
             onClick={() => playPlaylist(list.id)}
           >
-            {/* <img src={image} className="playlist_image" alt="Playlist-Art" /> */}
             <img
               src={list?.images[0]?.url}
               className="playlist_image"
